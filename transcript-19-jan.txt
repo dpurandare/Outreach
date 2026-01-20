@@ -1,0 +1,178 @@
+CONVERSATION TRANSCRIPT - JANUARY 19, 2026
+Deepak Purandare & Vinod Himatsinghani
+
+Project: Outreach Automation System for Energy Industry Sales
+
+==============================================================================
+
+[00:03] Vinod: There you go.
+
+[00:05] Deepak: OK, it's good. So if I need to refer to our conversation again, I'll be able to do that if I get the transcript of this.
+
+[00:11] Vinod: Sure. You'll get the transcript automatically. We'll speak in English, so the transcript will be logical then.
+
+[00:23] Deepak: And that will be really helpful actually for the agents.
+
+[00:30] Deepak: So I'm trying to understand the overall theme of this application and the main features that you are expecting. Let me explain what I understood and then we can go into the details.
+
+[00:47] Deepak: So that we can explore the most important and critical features of the application that we want.
+
+[00:59] Deepak: As I understand, we have some of these applications that we are using right now. So I'm aware that we are using Zoho CRM for our CRM activities, but I'm not aware if we are using any other application. I believe LinkedIn is available, but you have to take the LinkedIn Sales Navigator subscription separately. That might be available, so...
+
+[01:37] Vinod: Yes, so we have taken Sales Navigator as a subscription.
+
+[01:46] Deepak: OK, so when we are doing our exploration, our folks are adding information, they are exploring and adding some possible leads information in Zoho. That I assume is our first point, right? And then we want to further qualify and enrich information about those leads and further check all the possibilities of how we can do that outreach operation with all the possibilities that you mentioned.
+
+[02:28] Vinod: Let me tell you what we've done. We are looking at a list of almost about 60 to 70 customers that we want to target in the US. These are all energy and utility customers. So we have the list, OK.
+
+[02:43] Vinod: From that list, I started and we've gone to two sources. One is Apollo.io, the second is Sales Navigator. Both these places have data related to these companies. So in Apollo.io I typically get the name of the person, his email address and his phone number essentially, and his title. Sales Navigator gives me all that and it gives me an intent. So what it does is it tells me whether this person was trying to buy something, search something, what is his probabilistic idea about what he's trying to look for and what he's going to buy comes from Sales Navigator.
+
+[03:19] Vinod: So there is a cross check and a match between the two that the same person exists. We get the same information from there. From a standpoint of verification of the phone number specifically, Sales Navigator is less reliable on phone number. Apollo is more reliable on phone number.
+
+[03:47] Vinod: Yeah, email typically... because nobody can mandate LinkedIn to put your business email. Lot of people put their personal email. So that's why you'll get 2 emails probably from Apollo and here. So email match also could happen or it could be different emails. Like in LinkedIn, it's my personal email right from the beginning. I mean my secondary email is a Jade email. But in Apollo they may have your business email because it's more sourcing from a data perspective. They're creators of lists. They sell all this information. That's their subscription.
+
+[04:26] Vinod: So Apollo is used for name, title, phone number and email. And LinkedIn has got name, title, and then we're looking for intent - what's the guy doing, what's he trying to look at and everything from that perspective. So these two lists...
+
+[04:51] Deepak: Sorry to interrupt, but I will restrict myself from asking those questions about how LinkedIn is getting access to that information of what was that person's intent and what he was buying and searching for. But I believe that information is available.
+
+[05:12] Vinod: Correct. I mean that's their model, that's their secret sauce. We don't know how they do that. They just say that this is it. This is an intent. OK, so we capture that intent and then from that intent that gets updated into Zoho, that needs to get updated into Zoho CRM.
+
+[05:31] Vinod: Once that Zoho CRM gets updated, then we want to create a message based on the intent - we want to create a personalized message and then that needs to be rolled out through LinkedIn and email and any other channel we choose to connect with. So there's an outreach happening. So this is the whole system that is required.
+
+[06:02] Deepak: OK, so our application initially talks to Zoho. So whenever we get this initial list, we assume that it is loaded in Zoho or we assume that it is a kind of a separate CSV type information or Excel type information that we are going to...
+
+[06:21] Vinod: No. So that list - assume that that shortlist was coming from Apollo and coming from LinkedIn and this has to be loaded into CRM, into Zoho.
+
+[06:35] Deepak: So somebody's going to do some search, get the list and load it to Zoho. Is that how it should be? I'm trying to understand that scenario.
+
+[06:42] Vinod: I mean, if we can automate that too, that means we know the list that comes from there and gets uploaded here - great. If you think that's not important, then we can manually do that.
+
+[06:58] Deepak: You mentioned initially we had a list of some 60-70 possible contacts. So where did we get it from?
+
+[07:03] Vinod: Accounts. 60-70 companies we want to target.
+
+[07:11] Deepak: OK. So 60-70 companies we are going to be targeting. So if I think as a layman, I will possibly try to find out who are the important people in those companies we should be reaching out to, and who are possibly linked or related to the function of procurement or purchase or something. Is that right?
+
+[07:40] Vinod: Yeah, correct.
+
+[07:42] Deepak: So you will do that kind of a pointed search where you get the names of the company and the names of the people. So what is the process you're going to be following? I know that this is a general process, but will you search in Apollo and LinkedIn Sales for finding the names as well?
+
+[08:08] Vinod: That's where I go.
+
+[08:10] Deepak: OK, and once you get the names then you will find the more specific information about those individuals to qualify them for the outreach and the shortlisted people...
+
+[08:28] Vinod: Correct.
+
+[08:31] Deepak: Will be targeted with this specific marketing campaign or outreach campaign. That's what we want - the appropriate messaging, appropriate content to be generated, either in the email, audio or video, or setting up some calls or something. So this is the overall theme.
+
+[08:53] Vinod: Yes, yes.
+
+[08:57] Deepak: So what are the most critical things? Like Zoho for example - Zoho is a CRM. I haven't used any CRM so far. I mean I was not required to, but what are the things we get from CRM from Zoho?
+
+[09:26] Vinod: It's more like a hub, a system where you're capturing all the progress that you're making in a sales cycle.
+
+[09:38] Deepak: So the individual sales people can keep - so it may be you're the head of the sales, the unit head is assigning the outreach or reach out task to the individuals and they can play out those tasks and update the status in that system. That's one thing.
+
+[10:01] Vinod: Correct. So if you see, let me try and show you this. Let's say my open deals. Let's talk about deals to make it easy. Let's say master data management, Quaker Oats. I'll just open this. So this is what it looks like. Typically where you are in your cycle essentially.
+
+[10:34] Deepak: Master data management, notes, contract records, attachments, stage history, competitive deals, cadence, open activities, cases, emails and all OK. So whatever you are showing me - this opportunity qualified - so this is the natural progression, a natural process that is followed for each lead till it becomes a customer.
+
+[11:03] Vinod: That is correct.
+
+[11:06] Vinod: So you can add your notes here. What is this note all about or opportunity prospects? What happened here? Essentially now if you see we are not really - we've not connected a lot of people. I'm not connected the emails here, but the minute you connect the emails, it all starts recording, right? Here from your email box essentially. And this is sign in with Navigator. I can directly access Sales Navigator from here. So I'm doing that right now essentially. So Apollo I can't do, but Navigator I can do from here.
+
+[11:48] Deepak: OK, Zoho I can get 15 days trial subscription, but for the Sales Navigator, I don't think there is any trial account available. So let me try out that thing on the Zoho. I'll certainly like to explore what all we can do with this.
+
+[12:17] Deepak: So the system we envisage...
+
+[12:29] Vinod: I'll show you this also - Sales Navigator - just for a second.
+
+[12:43] Vinod: I've got to assign this because we just got renewed. That's why it's not...
+
+[12:52] Deepak: They must be charging per person per month or something like that, right?
+
+[12:56] Vinod: Yeah, yeah, yes, this is what it is.
+
+[13:05] Vinod: Anyway, I'll show you once this is set up - the Sales Navigator.
+
+[13:25] Deepak: Do we have access to Apollo as well? Because what I did was I tried to - I generated a CSV file with the names from the energy industry and the real data actually with their contacts and all or whatever information available with the thought that I'll take that information and try to enrich it and see. But unfortunately Apollo needs - Apollo said you want to work with the CSV file, you cannot do it with trial version. So if we are serious about this use of Apollo, we might as well get one seat license.
+
+[14:27] Vinod: I can - there's a lady called Neha Sharma. She works extensively with Apollo. I'll have a demo on that Apollo to you.
+
+[14:39] Deepak: Possibly something that I can try their API with. Actually, I saw that they have the API for enrichment, so you can upload the CSV file.
+
+[14:54] Deepak: And for whatever information you provided, especially the names and some qualifiers like email or telephone number, they enrich all that information and give it back. So I wanted to try out that but with the trial edition it is not working.
+
+[15:13] Deepak: But that will be a great idea actually, to see. So Vinod, I'll target it. So initially I will target that enrichment part and the second one is the messaging. I think we'll have to again have a session on the messaging part because...
+
+[15:42] Deepak: Once we also - the qualification part, there is some extensive logic that you have developed. So I need to validate that we have all the required information or we get all the required information through enrichment that helps us in the automated qualification. So there's one thing - that qualification, enrichment and qualification. These are the essential things. So I think especially tomorrow I can spend time on that. Meantime, any other, any immediate inputs you want to give?
+
+[16:30] Vinod: No, I think...
+
+[16:35] Deepak: So what I did, I'll just share with you. Can I share my screen?
+
+[16:43] Vinod: Sure.
+
+[16:58] Deepak: Do you see my screen?
+
+[17:03] Vinod: Yeah.
+
+[17:05] Deepak: So I created this repo and I started doing this research. So I found that there is some API that LinkedIn Sales Navigator has for accessing this information.
+
+[17:26] Deepak: So this is for the LinkedIn Sales Navigator. Then there is something for the Apollo so I wanted to try out this but... There's people API, there's people enrichment, org search. So there are all these APIs so I can try out that.
+
+[20:27] Deepak: Engagement, tracking, outreach, set, then monitor engagement. Email open, email reply, LinkedIn...
+
+[20:47] Deepak: Now the next thing is going to be detailing it out from the implementation standpoint. How this whole thing will work?
+
+[21:11] Deepak: We also will need some way to kind of communicate with it. Additional functionality to implement maybe next session.
+
+[21:27] Vinod: Yeah. The four topics that we're going to make an outreach about - basically each topic.
+
+[21:37] Vinod: Outreach is going to happen on these four topics.
+
+[21:48] Deepak: Generation forecasting, IPP utility sales portal.
+
+[21:52] Vinod: Data Ops, Field Force.
+
+[21:56] Vinod: Sales code automation...
+
+[22:07] Deepak: Online system integration.
+
+[22:19] Deepak: These are different areas, Apollo areas. Presentation material, your messaging create...
+
+[22:37] Deepak: The application has shown all the systems and those are appearing in the context but...
+
+[22:57] Deepak: Yeah, outreach execution, GoHighLevel system. Maybe next time.
+
+[22:58] Vinod: This is our overall system. High level.
+
+[23:09] Vinod: I will show it to you next time.
+
+[23:15] Deepak: Within half an hour I'll spend some. Yeah, this is good enough for me to work tomorrow and I'll try to reach out to you tomorrow.
+
+[23:22] Vinod: No, no problems. That's OK. Don't worry. Sounds good. All right. Thank you.
+
+==============================================================================
+
+KEY SYSTEMS AND TOOLS DISCUSSED:
+- Zoho CRM → System of record (accounts, contacts, pipeline, scoring)
+- Sales Navigator + Apollo.io → Prospect discovery + enrichment
+- GoHighLevel (GHL) → Multi-channel outreach orchestration (email + LinkedIn)
+- LLMs (ChatGPT Pro, Claude Pro, Gemini Pro) → Research + personalization engine
+- Canva / Gamma / Napkin.ai → Credibility assets (1-pagers, micro-decks, visuals)
+- Veed.io / HeyGen → Optional high-touch video follow-ups for top-scored accounts
+
+KEY TAKEAWAYS:
+1. Target: 60-70 energy & utility companies in the US
+2. Two-source approach: Apollo.io (contact data) + Sales Navigator (intent data)
+3. Workflow: Discovery → Enrichment → Zoho CRM → Personalized messaging → Multi-channel outreach
+4. Priority areas: Enrichment automation and qualification logic
+5. Four outreach topics: Generation forecasting, IPP utility sales portal, Data Ops, Field Force, Sales code automation
+
+NEXT STEPS:
+- Deepak to explore Zoho CRM trial
+- Explore Apollo.io API for enrichment
+- Validate qualification logic requirements
+- Schedule follow-up on messaging strategy
+- Demo of GoHighLevel system
