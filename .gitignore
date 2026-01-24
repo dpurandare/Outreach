@@ -1,0 +1,14 @@
+# Environment variables and secrets
+config/.env
+.env
+
+# macOS files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+*.tmp

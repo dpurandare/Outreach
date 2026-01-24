@@ -1,0 +1,24 @@
+Things done:
+1. Understand basic CRM concepts and how to in the ZOHO CRM
+2. Understand how the lead generation happens in the LinkedIn Sales Navigator
+
+Progress:
+1. Understand ZOHO CRM API capabilities. Basic documentation in place. Need to try out some code and see how it works
+will crate couple of good test scenario and then start the subscription
+- Got the test data for loading the leads. We can try that
+- Need access to the Apollo.io so that we can enrich the information of these individuals and upload 
+
+
+2. LinkedIn Sales Navigator trial and connecting it inside ZOHO
+
+
+Questions:
+1. Is their facility to bulk upload leads in ZOHO?
+Yes, we can. 
+https://youtu.be/Fc4p7Xnijho
+
+2. What all API we need for ZOHO integration?
+Check the document research/ZOHO-API.md
+
+3. Do we really need the GoHighLevel? what specific tasks it will do in the orchestration?
+
