@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# LinkedIn Sales Navigator API Test Script
-# This script tests OAuth authentication and lead search API
+# LinkedIn API Test Script (Basic Profile Access)
+# This script tests OAuth authentication and basic profile API access
 
 # Load environment variables
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -30,7 +30,7 @@ CLIENT_SECRET="$LINKEDIN_SALES_NAV_CLIENT_SECRET"
 AUTHORIZATION_CODE="${1:-}"
 REDIRECT_URI="${2:-http://localhost:8080/callback}"
 SEARCH_NAME="${3:-John Doe}"
-SCOPES="${4:-r_liteprofile r_emailaddress}"
+SCOPES="${4:-r_profile_basicinfo email}"
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -38,7 +38,7 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== LinkedIn Sales Navigator API Test ===${NC}\n"
+echo -e "${BLUE}=== LinkedIn API Test (Basic Profile Access) ===${NC}\n"
 
 # Check if authorization code is provided
 if [ -z "$AUTHORIZATION_CODE" ]; then
@@ -91,44 +91,39 @@ echo -e "${GREEN}Access Token obtained successfully!${NC}"
 echo "Token: ${ACCESS_TOKEN:0:20}..."
 echo ""
 
-# API Request 2: Search for leads by name
-echo -e "${BLUE}=== Step 2: Searching for leads by name ===${NC}"
-echo "Search query: $SEARCH_NAME"
+# API Request 2: Get user profile (basic test with available scopes)
+echo -e "${BLUE}=== Step 2: Getting user profile ===${NC}"
+echo "Testing basic profile access..."
 echo ""
 
-# URL encode the search name
-ENCODED_NAME=$(echo "$SEARCH_NAME" | sed 's/ /%20/g')
-
-LEADS_RESPONSE=$(curl -s -X GET "https://api.linkedin.com/v2/salesNavigator/leads?q=keyword&keywords=$ENCODED_NAME" \
+PROFILE_RESPONSE=$(curl -s -X GET "https://api.linkedin.com/v2/people/~" \
   -H "Authorization: Bearer $ACCESS_TOKEN")
 
-echo "Leads Search Response:"
-echo "$LEADS_RESPONSE" | jq '.' 2>/dev/null || echo "$LEADS_RESPONSE"
+echo "Profile Response:"
+echo "$PROFILE_RESPONSE" | jq '.' 2>/dev/null || echo "$PROFILE_RESPONSE"
 echo ""
 
-# Check if the search was successful
-if echo "$LEADS_RESPONSE" | jq -e '.elements' > /dev/null 2>&1; then
-    LEAD_COUNT=$(echo "$LEADS_RESPONSE" | jq '.elements | length')
-    echo -e "${GREEN}Search completed! Found $LEAD_COUNT lead(s)${NC}"
+# Check if the request was successful
+if echo "$PROFILE_RESPONSE" | jq -e '.id' > /dev/null 2>&1; then
+    USER_ID=$(echo "$PROFILE_RESPONSE" | jq -r '.id')
+    FIRST_NAME=$(echo "$PROFILE_RESPONSE" | jq -r '.firstName.localized.en_US // .firstName')
+    LAST_NAME=$(echo "$PROFILE_RESPONSE" | jq -r '.lastName.localized.en_US // .lastName')
     
-    # Optional: Get details of first lead if available
-    if [ "$LEAD_COUNT" -gt 0 ]; then
-        FIRST_LEAD_ID=$(echo "$LEADS_RESPONSE" | jq -r '.elements[0].id')
-        if [ "$FIRST_LEAD_ID" != "null" ]; then
-            echo ""
-            echo -e "${BLUE}=== Step 3 (Optional): Fetching details for first lead ===${NC}"
-            echo "Lead ID: $FIRST_LEAD_ID"
-            echo ""
-            
-            LEAD_DETAILS=$(curl -s -X GET "https://api.linkedin.com/v2/salesNavigator/leads/$FIRST_LEAD_ID" \
-              -H "Authorization: Bearer $ACCESS_TOKEN")
-            
-            echo "Lead Details:"
-            echo "$LEAD_DETAILS" | jq '.' 2>/dev/null || echo "$LEAD_DETAILS"
-        fi
-    fi
+    echo -e "${GREEN}Profile access successful!${NC}"
+    echo "User ID: $USER_ID"
+    echo "Name: $FIRST_NAME $LAST_NAME"
+    
+    # Note about Sales Navigator limitation
+    echo ""
+    echo -e "${YELLOW}Note: Sales Navigator API requires special access and different scopes.${NC}"
+    echo "With current scopes (r_profile_basicinfo, email), you can access basic profile info."
+    echo "For lead search functionality, you'll need Sales Navigator API access."
+    
 else
-    echo -e "${RED}Search failed or returned no results${NC}"
+    echo -e "${RED}Profile access failed${NC}"
+    ERROR_CODE=$(echo "$PROFILE_RESPONSE" | jq -r '.serviceErrorCode' 2>/dev/null)
+    ERROR_MESSAGE=$(echo "$PROFILE_RESPONSE" | jq -r '.message' 2>/dev/null)
+    echo "Error: $ERROR_CODE - $ERROR_MESSAGE"
 fi
 
 echo ""
