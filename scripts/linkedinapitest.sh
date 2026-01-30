@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# LinkedIn API Test Script (Basic Profile Access)
-# This script tests OAuth authentication and basic profile API access
+# LinkedIn API Test Script (Lead Gen Forms & Ads Access)
+# This script tests OAuth authentication and LinkedIn Lead Gen Forms API access
+# Available scopes: r_ads, r_ads_leadgen_automation, r_marketing_leadgen_automation, r_organization_admin
 
 # Load environment variables
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -30,7 +31,7 @@ CLIENT_SECRET="$LINKEDIN_SALES_NAV_CLIENT_SECRET"
 AUTHORIZATION_CODE="${1:-}"
 REDIRECT_URI="${2:-http://localhost:8080/callback}"
 SEARCH_NAME="${3:-John Doe}"
-SCOPES="${4:-r_profile_basicinfo email}"
+SCOPES="${4:-r_ads r_ads_leadgen_automation r_marketing_leadgen_automation r_organization_admin openid profile email}"
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -38,7 +39,7 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== LinkedIn API Test (Basic Profile Access) ===${NC}\n"
+echo -e "${BLUE}=== LinkedIn API Test (Lead Gen Forms & Ads Access) ===${NC}\n"
 
 # Check if authorization code is provided
 if [ -z "$AUTHORIZATION_CODE" ]; then
@@ -66,13 +67,12 @@ echo ""
 echo -e "${BLUE}=== Step 1: Exchanging authorization code for access token ===${NC}"
 echo ""
 
-TOKEN_RESPONSE=$(curl -s -X POST https://www.linkedin.com/oauth/v2/accessToken \
+# URL-encode the client secret (handles == at the end)
+ENCODED_CLIENT_SECRET=$(echo -n "$CLIENT_SECRET" | sed 's/=/%3D/g')
+
+TOKEN_RESPONSE=$(curl -s -X POST "https://www.linkedin.com/oauth/v2/accessToken" \
   -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "grant_type=authorization_code" \
-  -d "code=$AUTHORIZATION_CODE" \
-  -d "redirect_uri=$REDIRECT_URI" \
-  -d "client_id=$CLIENT_ID" \
-  -d "client_secret=$CLIENT_SECRET")
+  -d "grant_type=authorization_code&code=$AUTHORIZATION_CODE&redirect_uri=$REDIRECT_URI&client_id=$CLIENT_ID&client_secret=$ENCODED_CLIENT_SECRET")
 
 echo "Token Response:"
 echo "$TOKEN_RESPONSE" | jq '.' 2>/dev/null || echo "$TOKEN_RESPONSE"
@@ -108,23 +108,178 @@ if echo "$PROFILE_RESPONSE" | jq -e '.id' > /dev/null 2>&1; then
     USER_ID=$(echo "$PROFILE_RESPONSE" | jq -r '.id')
     FIRST_NAME=$(echo "$PROFILE_RESPONSE" | jq -r '.firstName.localized.en_US // .firstName')
     LAST_NAME=$(echo "$PROFILE_RESPONSE" | jq -r '.lastName.localized.en_US // .lastName')
-    
+
     echo -e "${GREEN}Profile access successful!${NC}"
     echo "User ID: $USER_ID"
     echo "Name: $FIRST_NAME $LAST_NAME"
-    
-    # Note about Sales Navigator limitation
-    echo ""
-    echo -e "${YELLOW}Note: Sales Navigator API requires special access and different scopes.${NC}"
-    echo "With current scopes (r_profile_basicinfo, email), you can access basic profile info."
-    echo "For lead search functionality, you'll need Sales Navigator API access."
-    
 else
-    echo -e "${RED}Profile access failed${NC}"
+    echo -e "${RED}Profile access failed (this may be expected with new scopes)${NC}"
     ERROR_CODE=$(echo "$PROFILE_RESPONSE" | jq -r '.serviceErrorCode' 2>/dev/null)
     ERROR_MESSAGE=$(echo "$PROFILE_RESPONSE" | jq -r '.message' 2>/dev/null)
     echo "Error: $ERROR_CODE - $ERROR_MESSAGE"
 fi
 
 echo ""
+
+# API Request 3: Get Ad Accounts
+echo -e "${BLUE}=== Step 3: Getting Ad Accounts ===${NC}"
+echo "Testing r_ads scope..."
+echo ""
+
+AD_ACCOUNTS_RESPONSE=$(curl -s -X GET "https://api.linkedin.com/v2/adAccountsV2?q=search" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Ad Accounts Response:"
+echo "$AD_ACCOUNTS_RESPONSE" | jq '.' 2>/dev/null || echo "$AD_ACCOUNTS_RESPONSE"
+echo ""
+
+# Extract first ad account ID if available
+AD_ACCOUNT_ID=""
+if echo "$AD_ACCOUNTS_RESPONSE" | jq -e '.elements[0]' > /dev/null 2>&1; then
+    AD_ACCOUNT_COUNT=$(echo "$AD_ACCOUNTS_RESPONSE" | jq '.elements | length')
+    AD_ACCOUNT_ID=$(echo "$AD_ACCOUNTS_RESPONSE" | jq -r '.elements[0].id')
+    AD_ACCOUNT_NAME=$(echo "$AD_ACCOUNTS_RESPONSE" | jq -r '.elements[0].name')
+
+    echo -e "${GREEN}Found $AD_ACCOUNT_COUNT ad account(s)${NC}"
+    echo "First Account ID: $AD_ACCOUNT_ID"
+    echo "First Account Name: $AD_ACCOUNT_NAME"
+else
+    echo -e "${RED}No ad accounts found or access denied${NC}"
+    ERROR_CODE=$(echo "$AD_ACCOUNTS_RESPONSE" | jq -r '.serviceErrorCode' 2>/dev/null)
+    ERROR_MESSAGE=$(echo "$AD_ACCOUNTS_RESPONSE" | jq -r '.message' 2>/dev/null)
+    if [ "$ERROR_CODE" != "null" ]; then
+        echo "Error: $ERROR_CODE - $ERROR_MESSAGE"
+    fi
+fi
+
+echo ""
+
+# API Request 4: Get Lead Gen Forms (try multiple methods)
+echo -e "${BLUE}=== Step 4: Getting Lead Gen Forms ===${NC}"
+echo "Testing r_ads_leadgen_automation and r_marketing_leadgen_automation scopes..."
+echo ""
+
+LEAD_FORM_ID=""
+
+# Method 1: Try with ad account if available
+if [ -n "$AD_ACCOUNT_ID" ] && [ "$AD_ACCOUNT_ID" != "null" ]; then
+    echo "Method 1: Querying by ad account: $AD_ACCOUNT_ID"
+    ACCOUNT_URN="urn:li:sponsoredAccount:$AD_ACCOUNT_ID"
+
+    LEAD_FORMS_RESPONSE=$(curl -s -X GET "https://api.linkedin.com/v2/leadForms?q=account&account=$ACCOUNT_URN" \
+      -H "Authorization: Bearer $ACCESS_TOKEN" \
+      -H "LinkedIn-Version: 202401" \
+      -H "X-Restli-Protocol-Version: 2.0.0")
+
+    echo "Response:"
+    echo "$LEAD_FORMS_RESPONSE" | jq '.' 2>/dev/null || echo "$LEAD_FORMS_RESPONSE"
+    echo ""
+fi
+
+# Method 2: Try direct leadForms endpoint
+echo "Method 2: Querying leadForms directly..."
+LEAD_FORMS_DIRECT=$(curl -s -X GET "https://api.linkedin.com/v2/leadForms" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Response:"
+echo "$LEAD_FORMS_DIRECT" | jq '.' 2>/dev/null || echo "$LEAD_FORMS_DIRECT"
+echo ""
+
+# Method 3: Try leadGenFormResponses endpoint directly
+echo "Method 3: Querying leadGenFormResponses..."
+LEAD_RESPONSES_DIRECT=$(curl -s -X GET "https://api.linkedin.com/v2/leadGenFormResponses" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Response:"
+echo "$LEAD_RESPONSES_DIRECT" | jq '.' 2>/dev/null || echo "$LEAD_RESPONSES_DIRECT"
+echo ""
+
+# Method 4: Try leadFormResponses endpoint
+echo "Method 4: Querying leadFormResponses..."
+LEAD_FORM_RESPONSES=$(curl -s -X GET "https://api.linkedin.com/v2/leadFormResponses" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Response:"
+echo "$LEAD_FORM_RESPONSES" | jq '.' 2>/dev/null || echo "$LEAD_FORM_RESPONSES"
+echo ""
+
+# Method 5: Try Lead Sync API endpoints
+echo "Method 5: Querying Lead Sync API - leadNotificationUrls..."
+LEAD_NOTIFICATION=$(curl -s -X GET "https://api.linkedin.com/v2/leadNotificationUrls" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Response:"
+echo "$LEAD_NOTIFICATION" | jq '.' 2>/dev/null || echo "$LEAD_NOTIFICATION"
+echo ""
+
+# Method 6: Try organization leads
+echo "Method 6: Querying organization leads (if any orgs)..."
+ORG_LEADS=$(curl -s -X GET "https://api.linkedin.com/v2/organizationLeadGenFormResponses" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Response:"
+echo "$ORG_LEADS" | jq '.' 2>/dev/null || echo "$ORG_LEADS"
+echo ""
+
+# Method 7: Try marketing leads endpoint
+echo "Method 7: Querying marketing leadFormResponses..."
+MARKETING_LEADS=$(curl -s -X GET "https://api.linkedin.com/rest/leadFormResponses" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Response:"
+echo "$MARKETING_LEADS" | jq '.' 2>/dev/null || echo "$MARKETING_LEADS"
+echo ""
+
+# Method 8: Try versioned API with owner query
+echo "Method 8: Querying leads by owner..."
+OWNER_LEADS=$(curl -s -X GET "https://api.linkedin.com/rest/leadForms?q=owner" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "LinkedIn-Version: 202401" \
+  -H "X-Restli-Protocol-Version: 2.0.0")
+
+echo "Response:"
+echo "$OWNER_LEADS" | jq '.' 2>/dev/null || echo "$OWNER_LEADS"
+echo ""
+
+echo -e "${BLUE}=== Step 5: Additional Lead Sync Tests ===${NC}"
+echo ""
+
+# Test userinfo to confirm identity
+echo "User Info:"
+curl -s -X GET "https://api.linkedin.com/v2/userinfo" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" | jq '.'
+echo ""
+
+echo ""
 echo -e "${GREEN}=== Test Complete ===${NC}"
+echo ""
+echo "Summary:"
+echo "- OAuth Token: $([ -n "$ACCESS_TOKEN" ] && echo "✓ Obtained" || echo "✗ Failed")"
+echo "- Profile Access: $(echo "$PROFILE_RESPONSE" | jq -e '.id' > /dev/null 2>&1 && echo "✓ Success" || echo "✗ Failed/Limited")"
+echo "- Ad Accounts: $([ -n "$AD_ACCOUNT_ID" ] && [ "$AD_ACCOUNT_ID" != "null" ] && echo "✓ Found ($AD_ACCOUNT_COUNT)" || echo "✗ None found")"
+echo ""
+echo "Tested Lead Endpoints:"
+echo "- /v2/leadForms (by account)"
+echo "- /v2/leadForms (direct)"
+echo "- /v2/leadGenFormResponses"
+echo "- /v2/leadFormResponses"
+echo "- /v2/leadNotificationUrls"
+echo "- /v2/organizationLeadGenFormResponses"
+echo "- /rest/leadFormResponses"
+echo "- /rest/leadForms?q=owner"
+echo ""
+echo "Review the responses above to see which endpoints returned data."

@@ -1,5 +1,7 @@
 # Outreach System Project
 
+> 📌 **New to this project?** Start with [DEVELOPER_BOOTSTRAP.md](DEVELOPER_BOOTSTRAP.md) for complete onboarding and current status, then check [tasks.md](tasks.md) for active work items.
+
 ## Overview
 This repository contains the design, research, and implementation documentation for **two major projects** requested by Vinod Himatsinghani:
 
@@ -29,8 +31,8 @@ Build a professional, enterprise-grade B2B outreach system using existing subscr
 - **Sales Navigator + Apollo.io** - Prospect discovery + enrichment
 - **GoHighLevel (GHL)** - Multi-channel outreach orchestration (email + LinkedIn)
 - **LLMs** (ChatGPT Pro, Claude Pro, Gemini Pro) - Research + personalization engine
-- **Canva / Gamma / Napkin.ai** - Credibility assets
-- **Veed.io / HeyGen** - Optional high-touch video follow-ups
+- **Canva / Gamma / Napkin.ai** - Credibility assets (create assets, presentations, diagrams, etc)
+- **Veed.io / HeyGen** - Optional high-touch video follow-ups (video generation)
 
 ### Key Principles
 ✅ AI never sends directly - Humans approve, edit, and trigger  

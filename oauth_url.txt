@@ -1,0 +1,1 @@
+https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=774iwtyo75oxzf&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback&scope=r_ads%20r_ads_leadgen_automation%20r_marketing_leadgen_automation%20r_organization_admin%20openid%20profile%20email

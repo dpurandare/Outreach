@@ -1,0 +1,695 @@
+
+Vinod Himatsinghani started transcription
+
+Vinod Himatsinghani
+0 minutes 3 seconds0:03
+Vinod Himatsinghani 0 minutes 3 seconds
+There you go.
+DP
+
+Deepak Purandare
+0 minutes 5 seconds0:05
+Deepak Purandare 0 minutes 5 seconds
+OK, it's good. So if I if I need to refer to our conversation again, you know I'll be able to do that and if I get the transcript of this.
+
+Vinod Himatsinghani
+0 minutes 11 seconds0:11
+Vinod Himatsinghani 0 minutes 11 seconds
+Sure.
+Vinod Himatsinghani 0 minutes 18 seconds
+You'll get the transcript automatically. We'll we'll speak in English, so the transcript will be logical then.
+DP
+
+Deepak Purandare
+0 minutes 19 seconds0:19
+Deepak Purandare 0 minutes 19 seconds
+Then you know.
+Deepak Purandare 0 minutes 21 seconds
+Yeah, yeah.
+Deepak Purandare 0 minutes 23 seconds
+And that will be really helpful actually for the agents.
+
+Vinod Himatsinghani
+0 minutes 26 seconds0:26
+Vinod Himatsinghani 0 minutes 26 seconds
+OK.
+DP
+
+Deepak Purandare
+0 minutes 30 seconds0:30
+Deepak Purandare 0 minutes 30 seconds
+So I'm trying to understand the overall theme of this application and the main features that you are expecting. OK, what I understood is let me explain what I understood and then the you know you can you we can go into the details.
+
+Vinod Himatsinghani
+0 minutes 38 seconds0:38
+Vinod Himatsinghani 0 minutes 38 seconds
+OK.
+DP
+Deepak Purandare
+0 minutes 47 seconds0:47
+Deepak Purandare 0 minutes 47 seconds
+So that we can we can explore the most important and critical features of the application that we want.
+Deepak Purandare 0 minutes 59 seconds
+As I understand, we have, we have some of these applications that we are are using right now. So I'm aware that we are using zo.zo.com for our CRM activities and all, but I'm not.
+Deepak Purandare 1 minute 15 seconds
+Aware that if we are using any other application, I believe as the LinkedIn is available, but you have to take the LinkedIn sales.
+Deepak Purandare 1 minute 31 seconds
+Subscription separately.
+Deepak Purandare 1 minute 35 seconds
+That might be available, so when?
+
+Vinod Himatsinghani
+1 minute 37 seconds1:37
+Vinod Himatsinghani 1 minute 37 seconds
+Yes, the so we have taken sales, sales navigator.
+DP
+Deepak Purandare
+1 minute 42 seconds1:42
+Deepak Purandare 1 minute 42 seconds
+Right.
+
+Vinod Himatsinghani
+1 minute 43 seconds1:43
+Vinod Himatsinghani 1 minute 43 seconds
+As a subscription.
+DP
+Deepak Purandare
+1 minute 46 seconds1:46
+Deepak Purandare 1 minute 46 seconds
+OK, so when as we are doing our exploration, our our folks are adding information, they are exploring and adding some possible leads kind of information in Zuo.
+Deepak Purandare 2 minutes 2 seconds
+That I I assume that is our first point, right? And then we want to further qualify and enrich information about those leads and and want to further.
+Deepak Purandare 2 minutes 19 seconds
+Check all the possibilities of how we can, you know, do that outreach operation with all the possibilities that you know you mentioned.
+
+Vinod Himatsinghani
+2 minutes 26 seconds2:26
+Vinod Himatsinghani 2 minutes 26 seconds
+Select.
+Vinod Himatsinghani 2 minutes 28 seconds
+So why don't you step back a little bit? Let me tell you what we've done is we are looking at almost a a list of almost about 60 to 70 customers that we want to go ahead and target in the US. These are all energy and utility customers. So we have the list, OK.
+DP
+Deepak Purandare
+2 minutes 32 seconds2:32
+Deepak Purandare 2 minutes 32 seconds
+OK.
+Deepak Purandare 2 minutes 43 seconds
+Mhm.
+
+Vinod Himatsinghani
+2 minutes 43 seconds2:43
+Vinod Himatsinghani 2 minutes 43 seconds
+From that list we've I started and we've gone to two sources. One is Apollo dot IO, the 2nd is Sales Navigator. OK, both these places have got data related to these companies. So in Apollo dot IO I typically get the name of the person.
+DP
+Deepak Purandare
+2 minutes 52 seconds2:52
+Deepak Purandare 2 minutes 52 seconds
+Oh.
+
+Vinod Himatsinghani
+3 minutes 3 seconds3:03
+Vinod Himatsinghani 3 minutes 3 seconds
+His e-mail address and his phone number essentially and his title. Sales Navigator give me all that and it gives me an intent. So it what it does is it tells me whether this person was trying to buy something, search something, what is his?
+DP
+Deepak Purandare
+3 minutes 8 seconds3:08
+Deepak Purandare 3 minutes 8 seconds
+Bye.
+
+Vinod Himatsinghani
+3 minutes 19 seconds3:19
+Vinod Himatsinghani 3 minutes 19 seconds
+Probabilistic idea about what is he trying to look for and what is he going to buy comes from Sales Navigator. So one there is a cross check and a match between the two that the same person exists. We get the same information from there from a standpoint of of verification of the phone number specifically Sales Navigator.
+Vinod Himatsinghani 3 minutes 39 seconds
+Is less reliable on phone number. Apollo is more reliable on phone number. OK and.
+DP
+Deepak Purandare
+3 minutes 43 seconds3:43
+Deepak Purandare 3 minutes 43 seconds
+Or especially maybe e-mail also could be one one thing to match but.
+
+Vinod Himatsinghani
+3 minutes 47 seconds3:47
+Vinod Himatsinghani 3 minutes 47 seconds
+Yeah, e-mail. Yeah, e-mail typically sales because nobody can mandate LinkedIn to put your business e-mail. Lot of people put their personally. So that's why you'll get 2 emails probably from Apollo and here. So e-mail match also could happen or it could be different emails also I.
+DP
+Deepak Purandare
+4 minutes4:00
+Deepak Purandare 4 minutes
+OK.
+
+Vinod Himatsinghani
+4 minutes 7 seconds4:07
+Vinod Himatsinghani 4 minutes 7 seconds
+Be like in LinkedIn. It's my personal e-mail right from the beginning. I don't. I mean my secondary e-mail is a Jade e-mail. OK, so but in Apollo they may have just your your because it's more sourcing from a data perspective. They're they're creators of lists.
+
+Deepak Purandare
+4 minutes 15 seconds4:15
+Deepak Purandare 4 minutes 15 seconds
+Bye.
+
+Vinod Himatsinghani
+4 minutes 26 seconds4:26
+Vinod Himatsinghani 4 minutes 26 seconds
+They sell all this information. That's their subscription. So that's I don't know whether they'll have personal or whatever it is, but typically Apollo is used for name, title, phone number and e-mail and LinkedIn has got name, title.
+Vinod Himatsinghani 4 minutes 43 seconds
+And then we're looking for intent, you know whether that what is the guy's doing, what's he trying to look at and everything from that perspective. So these two lists.
+DP
+Deepak Purandare
+4 minutes 51 seconds4:51
+Deepak Purandare 4 minutes 51 seconds
+So sorry to interrupt, but I we have, you know, probably I will restrict myself from asking those questions that how LinkedIn is getting access to that information of you know what was.
+Deepak Purandare 5 minutes 5 seconds
+That person's intent and what he was buying and searching for, searching to buy and something. But but I I believe that information is kind of, yeah.
+
+Vinod Himatsinghani
+5 minutes 12 seconds5:12
+Vinod Himatsinghani 5 minutes 12 seconds
+Correct. I mean that's that's their model, that's their secret sauce. We don't know how they do that. They just say that this is it. This is an intent. OK, so we capture that intent and then from that intent that gets updated into Zoho, that needs to get updated into Zoho CRM.
+DP
+Deepak Purandare
+5 minutes 22 seconds5:22
+Deepak Purandare 5 minutes 22 seconds
+OK.
+Deepak Purandare 5 minutes 31 seconds
+Uh huh.
+
+Vinod Himatsinghani
+5 minutes 31 seconds5:31
+Vinod Himatsinghani 5 minutes 31 seconds
+OK, the once that Zoho CRM is gets updated then we want to create a message for the based on the intent we want to create a message.
+Vinod Himatsinghani 5 minutes 44 seconds
+OK, personalized message and then that needs to be rolled out through LinkedIn and e-mail and any other channel we choose to connect with. So so there's an outreach happening. So this is the whole system that is required.
+DP
+Deepak Purandare
+5 minutes 44 seconds5:44
+Deepak Purandare 5 minutes 44 seconds
+OK hmm.
+Deepak Purandare 6 minutes 2 seconds
+OK, so our application initially talks to Zoho. So we we whenever we get this this initial list, we assume that it isn't it is loaded in Zoho or we assume that it is a kind of a separate CSV type.
+Deepak Purandare 6 minutes 20 seconds
+Information or Excel type information that we are going to.
+
+Vinod Himatsinghani
+6 minutes 21 seconds6:21
+Vinod Himatsinghani 6 minutes 21 seconds
+No. So that list assume that that short list was coming from Apollo and coming from LinkedIn and this has to be loaded into CRM so into into Zoho.
+DP
+Deepak Purandare
+6 minutes 35 seconds6:35
+Deepak Purandare 6 minutes 35 seconds
+So somebody's going to do some search, get the list and load it to Zoho. Is that how it should be admin? I'm trying to understand that scenario.
+
+Vinod Himatsinghani
+6 minutes 42 seconds6:42
+Vinod Himatsinghani 6 minutes 42 seconds
+I mean, if we can do, if you want, if we can automate that too, that means we know the list that comes from there and gets uploaded here. Great. If you think that's not important, then you know we'll then we can manually do that.
+DP
+Deepak Purandare
+6 minutes 58 seconds6:58
+Deepak Purandare 6 minutes 58 seconds
+You mentioned we have initially we had list of some 6070 possible contacts. So where it where where did we get it from?
+
+Vinod Himatsinghani
+7 minutes 3 seconds7:03
+Vinod Himatsinghani 7 minutes 3 seconds
+Accounts.
+Vinod Himatsinghani 7 minutes 7 seconds
+6070 companies we want to target.
+DP
+Deepak Purandare
+7 minutes 11 seconds7:11
+Deepak Purandare 7 minutes 11 seconds
+OK. So so 6070 companies we are going to be targeting. So we if I think as a an kind of a layman, I will possibly try to find out who are the the, the important people in those companies, you know we should be reaching out.
+Deepak Purandare 7 minutes 30 seconds
+And who are possibly linked or related to the the function of procurement or or purchase or something? Is that right?
+
+Vinod Himatsinghani
+7 minutes 40 seconds7:40
+Vinod Himatsinghani 7 minutes 40 seconds
+Yeah, correct.
+DP
+Deepak Purandare
+7 minutes 42 seconds7:42
+Deepak Purandare 7 minutes 42 seconds
+So you will do that kind of a pointed search or you will you get the names of the company and you need to names of the people. So what is what is the process you're going to be following? I know that you know this is a general process, but you will you will search in Apollo and.
+Deepak Purandare 8 minutes 2 seconds
+That LinkedIn sales for for finding the the names as well.
+
+Vinod Himatsinghani
+8 minutes 8 seconds8:08
+Vinod Himatsinghani 8 minutes 8 seconds
+That's where I go.
+DP
+Deepak Purandare
+8 minutes 10 seconds8:10
+Deepak Purandare 8 minutes 10 seconds
+OK, and once you get the names then you will.
+Deepak Purandare 8 minutes 15 seconds
+You will find the more the specific information about for those individuals to qualify them for the outreach and the shortlisted, the shortlisted people.
+
+Vinod Himatsinghani
+8 minutes 28 seconds8:28
+Vinod Himatsinghani 8 minutes 28 seconds
+Correct.
+DP
+Deepak Purandare
+8 minutes 31 seconds8:31
+Deepak Purandare 8 minutes 31 seconds
+Will be targeted with this specific marketing campaign or even outreach campaign. That's what we want. You know the the the appropriate messaging, appropriate content to be generated. You know it's.
+
+Vinod Himatsinghani
+8 minutes 38 seconds8:38
+Vinod Himatsinghani 8 minutes 38 seconds
+Correct.
+DP
+Deepak Purandare
+8 minutes 47 seconds8:47
+Deepak Purandare 8 minutes 47 seconds
+Either in the e-mail, audio or video, you know, or you know, setting up some calls or something. So this is the overall theme, yeah.
+
+Vinod Himatsinghani
+8 minutes 53 seconds8:53
+Vinod Himatsinghani 8 minutes 53 seconds
+Yes.
+Vinod Himatsinghani 8 minutes 56 seconds
+Yes.
+Deepak Purandare
+8 minutes 57 seconds8:57
+Deepak Purandare 8 minutes 57 seconds
+So what is what are the most critical things? Those are, I mean Zoho for example.
+Deepak Purandare 9 minutes 7 seconds
+Zoho is a CRM. I haven't kind of, you know, used any any CRM so far. I mean I I was not required to, but what are what are things we get from CRM from Zoho?
+
+Vinod Himatsinghani
+9 minutes 15 seconds9:15
+Vinod Himatsinghani 9 minutes 15 seconds
+OK.
+Vinod Himatsinghani 9 minutes 22 seconds
+So.
+DP
+Deepak Purandare
+9 minutes 23 seconds9:23
+Deepak Purandare 9 minutes 23 seconds
+Well, yes.
+
+Vinod Himatsinghani
+9 minutes 26 seconds9:26
+Vinod Himatsinghani 9 minutes 26 seconds
+It's more, it's more like a a hub, a system where you're capturing all the progress that you're making in a sales cycle.
+DP
+Deepak Purandare
+9 minutes 38 seconds9:38
+Deepak Purandare 9 minutes 38 seconds
+So the individual sales people can keep you know so it it maybe you're the the the head of the sales you know the unit head is assigning the outreach or reach out you know the kind of a task to the individuals and they can.
+Deepak Purandare 9 minutes 58 seconds
+Play out those tasks and update the status in in that system. That's one thing.
+
+Vinod Himatsinghani
+10 minutes 1 second10:01
+Vinod Himatsinghani 10 minutes 1 second
+Correct. So if you see, so so if you see, let me try and kind of show you this. Let's say my open deals, OK.
+Vinod Himatsinghani 10 minutes 13 seconds
+Let's talk about deals become easy. Let's say master data management. Quaker hout and I'll just open this.
+Vinod Himatsinghani 10 minutes 25 seconds
+So this is what it looks like. OK, typically. So where you are in your cycle essentially.
+DP
+Deepak Purandare
+10 minutes 30 seconds10:30
+Deepak Purandare 10 minutes 30 seconds
+But I.
+Deepak Purandare 10 minutes 34 seconds
+Yeah, can you hold on for for for a few seconds. So master data management, nodes, contract records, attachments, straight tree, competitive disk cadence, open activities, OK, cases emails and all OK.
+Deepak Purandare 10 minutes 51 seconds
+OK, so this is so whatever you are showing me, this opportunity qualified. So this is the natural progression on a natural process that that is followed for each lead till it becomes a kind of a custom.
+
+Vinod Himatsinghani
+10 minutes 52 seconds10:52
+Vinod Himatsinghani 10 minutes 52 seconds
+OK.
+Vinod Himatsinghani 11 minutes 3 seconds
+That is correct.
+DP
+Deepak Purandare
+11 minutes 6 seconds11:06
+Deepak Purandare 11 minutes 6 seconds
+OK.
+
+Vinod Himatsinghani
+11 minutes 6 seconds11:06
+Vinod Himatsinghani 11 minutes 6 seconds
+So you can add your notes here. What is this note all about or opportunity prospects? What happened here? Essentially now if you see we are not really, we've not connected a lot of people. I'm not connected the emails here, but the minute you connect the emails, it all starts recording, right?
+DP
+Deepak Purandare
+11 minutes 9 seconds11:09
+Deepak Purandare 11 minutes 9 seconds
+M.
+Deepak Purandare 11 minutes 12 seconds
+Bye.
+Deepak Purandare 11 minutes 16 seconds
+Oh.
+
+Vinod Himatsinghani
+11 minutes 26 seconds11:26
+Vinod Himatsinghani 11 minutes 26 seconds
+Here from your e-mail box essentially and this is sign in with Navigator. I can directly access Sales Navigator from here. So I'm doing that right now essentially. So Apollo I can't do.
+Vinod Himatsinghani 11 minutes 42 seconds
+But Navigator I can do from here.
+DP
+Deepak Purandare
+11 minutes 48 seconds11:48
+Deepak Purandare 11 minutes 48 seconds
+OK, Zoho, I can get 15 days trial subscription, but for the sales navigator, I don't think there is any trial account available. So let me try out that thing on the Zoho for I'll I'll certainly like to explore.
+
+Vinod Himatsinghani
+12 minutes 4 seconds12:04
+Vinod Himatsinghani 12 minutes 4 seconds
+OK.
+DP
+Deepak Purandare
+12 minutes 7 seconds12:07
+Deepak Purandare 12 minutes 7 seconds
+I mean what all we can do with this, OK.
+
+Vinod Himatsinghani
+12 minutes 14 seconds12:14
+Vinod Himatsinghani 12 minutes 14 seconds
+Yeah.
+DP
+Deepak Purandare
+12 minutes 17 seconds12:17
+Deepak Purandare 12 minutes 17 seconds
+So as so the system we are, we envisage.
+Deepak Purandare 12 minutes 28 seconds
+As.
+
+Vinod Himatsinghani
+12 minutes 29 seconds12:29
+Vinod Himatsinghani 12 minutes 29 seconds
+I'll show you this also Sales Navigator just for a second.
+DP
+Deepak Purandare
+12 minutes 30 seconds12:30
+Deepak Purandare 12 minutes 30 seconds
+It's a back, no.
+
+Vinod Himatsinghani
+12 minutes 43 seconds12:43
+Vinod Himatsinghani 12 minutes 43 seconds
+Yeah, I've got to assign this because we just got renewed. That's why it's not.
+DP
+Deepak Purandare
+12 minutes 52 seconds12:52
+Deepak Purandare 12 minutes 52 seconds
+They must be charging per person per, you know, something like that, right?
+
+Vinod Himatsinghani
+12 minutes 56 seconds12:56
+Vinod Himatsinghani 12 minutes 56 seconds
+Yeah, yeah, yes, this is what it is.
+DP
+Deepak Purandare
+12 minutes 59 seconds12:59
+Deepak Purandare 12 minutes 59 seconds
+Per person per month.
+
+Vinod Himatsinghani
+13 minutes13:00
+Vinod Himatsinghani 13 minutes
+Connect.
+Vinod Himatsinghani 13 minutes 5 seconds
+Anyway, I'll I'll show you once this is set up the Sales Navigator.
+Vinod Himatsinghani 13 minutes 23 seconds
+Deepak.
+DP
+Deepak Purandare
+13 minutes 25 seconds13:25
+Deepak Purandare 13 minutes 25 seconds
+Do we have access to Apollo as well, Sir?
+
+
+
+Deepak Purandare 13 minutes 37 seconds
+Because you know I I I wanted to see what I did was I tried to get I I generated a CSV file with with with the names from the energy industry.
+Deepak Purandare 13 minutes 53 seconds
+And the real data actually with their with their contacts and all or whatever information available with the thought that you know I'll I'll take that information and try to enrich it and see. But unfortunately the Apollo needs Apollo said you know.
+
+Vinod Himatsinghani
+14 minutes 3 seconds14:03
+Vinod Himatsinghani 14 minutes 3 seconds
+OK.
+Vinod Himatsinghani 14 minutes 8 seconds
+OK.
+DP
+Deepak Purandare
+14 minutes 13 seconds14:13
+Deepak Purandare 14 minutes 13 seconds
+You want to work with the CSV file you need. You cannot do it with trial version. So if we have, if we get, if we are serious about this, you know use of Apollo, you know might as well we get one seat license.
+
+Vinod Himatsinghani
+14 minutes 27 seconds14:27
+Vinod Himatsinghani 14 minutes 27 seconds
+I can, I can have there's there's a lady called Neha Sharma. She works extensively with Apollo. I'll have a demo on that Apollo to you.
+DP
+Deepak Purandare
+14 minutes 29 seconds14:29
+Deepak Purandare 14 minutes 29 seconds
+Hmm.
+Deepak Purandare 14 minutes 32 seconds
+Oh.
+Deepak Purandare 14 minutes 39 seconds
+I possibly, possibly something that I can try their API with. Actually, you know, yeah, yeah, I saw that they have the API for enrichment, so you can you can upload the CSV file.
+
+Vinod Himatsinghani
+14 minutes 44 seconds14:44
+Vinod Himatsinghani 14 minutes 44 seconds
+OK.
+DP
+Deepak Purandare
+14 minutes 54 seconds14:54
+Deepak Purandare 14 minutes 54 seconds
+And for whatever in whatever information you provided the especially the names and you know some qualifiers like e-mail of telephone number, they enrich all that in all the information and give it give it back. So I I wanted to try out that but with the the trial edition it is not working so.
+Deepak Purandare 15 minutes 13 seconds
+Yeah, but that will be. That will be a great idea actually, to see.
+Deepak Purandare 15 minutes 23 seconds
+So I will. So Vinod, I'll target it. So initially I will target that enrichment part and the second one is the messaging. I think we'll have to, we'll have to again have a session on the messaging part because.
+
+Vinod Himatsinghani
+15 minutes 26 seconds15:26
+Vinod Himatsinghani 15 minutes 26 seconds
+G.
+DP
+Deepak Purandare
+15 minutes 42 seconds15:42
+Deepak Purandare 15 minutes 42 seconds
+Once we also the qualification part, there is some extensive logic that you have developed. So I need to validate that we have all the all the required information or we get all the required information through enrichment.
+Deepak Purandare 16 minutes 1 second
+That we that helps us in the in this automated qualification. So there's one thing is that qualify enrichment and qualification. These are the essential things. So I think we can I can.
+Deepak Purandare 16 minutes 17 seconds
+Especially tomorrow I can, I can, you know, spend time cycle on that. Meantime, any other, any immediate inputs you want to give?
+
+Vinod Himatsinghani
+16 minutes 22 seconds16:22
+Vinod Himatsinghani 16 minutes 22 seconds
+Good.
+Vinod Himatsinghani 16 minutes 30 seconds
+No, I think.
+Vinod Himatsinghani 16 minutes 35 seconds
+Yes.
+DP
+Deepak Purandare
+16 minutes 35 seconds16:35
+Deepak Purandare 16 minutes 35 seconds
+So what I did, I I'll just, uh, share with you.
+Deepak Purandare 16 minutes 40 seconds
+Can I share my screen?
+
+Vinod Himatsinghani
+16 minutes 43 seconds16:43
+Vinod Himatsinghani 16 minutes 43 seconds
+Sure.
+DP
+Deepak Purandare
+16 minutes 46 seconds16:46
+Deepak Purandare 16 minutes 46 seconds
+Hello.
+
+Vinod Himatsinghani
+16 minutes 56 seconds16:56
+Vinod Himatsinghani 16 minutes 56 seconds
+But.
+DP
+Deepak Purandare
+16 minutes 58 seconds16:58
+Deepak Purandare 16 minutes 58 seconds
+Do you see my screen, Sir?
+
+Vinod Himatsinghani
+17 minutes 3 seconds17:03
+Vinod Himatsinghani 17 minutes 3 seconds
+Yeah.
+DP
+Deepak Purandare
+17 minutes 5 seconds17:05
+Deepak Purandare 17 minutes 5 seconds
+So I created this repo.
+Deepak Purandare 17 minutes 8 seconds
+And I'm going to so I started doing this research. So I I I found that there is some API you know that LinkedIn Sales Navigator has for accessing this information and after.
+Deepak Purandare 17 minutes 23 seconds
+Oh.
+
+Vinod Himatsinghani
+17 minutes 24 seconds17:24
+Vinod Himatsinghani 17 minutes 24 seconds
+But.
+DP
+Deepak Purandare
+17 minutes 26 seconds17:26
+Deepak Purandare 17 minutes 26 seconds
+I so this is I. This is for the LinkedIn Sales Navigator. Then there is there is something for the Apollo so I can. I wanted to try out this but.
+
+Vinod Himatsinghani
+17 minutes 32 seconds17:32
+Vinod Himatsinghani 17 minutes 32 seconds
+OK.
+DP
+Deepak Purandare
+17 minutes 41 seconds17:41
+Deepak Purandare 17 minutes 41 seconds
+Somehow the the tile.
+Deepak Purandare 17 minutes 46 seconds
+Yeah, you can say people API, there's people enrichment org search. So there are all these APIs so I can try out that.
+Deepak Purandare 17 minutes 55 seconds
+The one more thing is whenever you get time.
+
+Vinod Himatsinghani
+17 minutes 55 seconds17:55
+Vinod Himatsinghani 17 minutes 55 seconds
+OK.
+
+
+Deepak Purandare 20 minutes 27 seconds
+Engagement, tracking, outreach, set, then monitor engagement.
+Deepak Purandare 20 minutes 38 seconds
+E-mail open e-mail reply LinkedIn.
+Deepak Purandare 20 minutes 45 seconds
+Do.
+Deepak Purandare 20 minutes 47 seconds
+Now the next thing is going to be detailing it out for the from the implementation standpoint.
+Deepak Purandare 21 minutes 3 seconds
+How this whole thing will work?
+
+Vinod Himatsinghani
+21 minutes 6 seconds21:06
+Vinod Himatsinghani 21 minutes 6 seconds
+Mm.
+DP
+Deepak Purandare
+21 minutes 11 seconds21:11
+Deepak Purandare 21 minutes 11 seconds
+You know we also will need some way to kind of communicate with it. Additional functionality implement maybe next session.
+
+Vinod Himatsinghani
+21 minutes 23 seconds21:23
+Vinod Himatsinghani 21 minutes 23 seconds
+Yeah.
+Vinod Himatsinghani 21 minutes 27 seconds
+Map for hero bits, but basically these are the four topics that we're going to make an outreach about.
+DP
+Deepak Purandare
+21 minutes 34 seconds21:34
+Deepak Purandare 21 minutes 34 seconds
+Yeah.
+
+Vinod Himatsinghani
+21 minutes 37 seconds21:37
+Vinod Himatsinghani 21 minutes 37 seconds
+Basically AHR topic.
+DP
+Deepak Purandare
+21 minutes 38 seconds21:38
+Deepak Purandare 21 minutes 38 seconds
+OK.
+
+Vinod Himatsinghani
+21 minutes 41 seconds21:41
+Vinod Himatsinghani 21 minutes 41 seconds
+Outreach is going to happen on these four topics.
+DP
+Deepak Purandare
+21 minutes 41 seconds21:41
+Deepak Purandare 21 minutes 41 seconds
+OK.
+Deepak Purandare 21 minutes 48 seconds
+Generation forecasting IPP utility sales portal.
+
+Vinod Himatsinghani
+21 minutes 52 seconds21:52
+Vinod Himatsinghani 21 minutes 52 seconds
+Data OPS Fieldforce.
+Vinod Himatsinghani 21 minutes 56 seconds
+Sales code automation Jadhav yeah, but he get chalo that's OK.
+DP
+Deepak Purandare
+21 minutes 56 seconds21:56
+Deepak Purandare 21 minutes 56 seconds
+Donation.
+Deepak Purandare 22 minutes 7 seconds
+Online system integration.
+Deepak Purandare 22 minutes 9 seconds
+It's going.
+Deepak Purandare 22 minutes 13 seconds
+Yeah, take.
+Deepak Purandare 22 minutes 17 seconds
+Yes.
+Deepak Purandare 22 minutes 19 seconds
+This is, you know, these are different area. Yeah, yeah, Apolloca area.
+Deepak Purandare 22 minutes 26 seconds
+Presentation material your messaging create.
+
+Vinod Himatsinghani
+22 minutes 36 seconds22:36
+Vinod Himatsinghani 22 minutes 36 seconds
+D.
+DP
+Deepak Purandare
+22 minutes 37 seconds22:37
+Deepak Purandare 22 minutes 37 seconds
+Yeah application you know it it has not shown it has shown you know all the systems and those are you know appearing in the context but.
+Deepak Purandare 22 minutes 54 seconds
+And.
+
+Vinod Himatsinghani
+22 minutes 55 seconds22:55
+Vinod Himatsinghani 22 minutes 55 seconds
+Yes.
+DP
+Deepak Purandare
+22 minutes 57 seconds22:57
+Deepak Purandare 22 minutes 57 seconds
+Yeah, outreach execution, go high, go high level system. Maybe next time.
+
+Vinod Himatsinghani
+22 minutes 58 seconds22:58
+Vinod Himatsinghani 22 minutes 58 seconds
+This is our overall system.
+Vinod Himatsinghani 23 minutes 5 seconds
+High level.
+Vinod Himatsinghani 23 minutes 9 seconds
+I will show it to you next time.
+DP
+Deepak Purandare
+23 minutes 15 seconds23:15
+Deepak Purandare 23 minutes 15 seconds
+Within in half an hour I'll spend some. Yeah, this is good enough for me to work tomorrow and I'll try to reach out to you tomorrow.
+
+Vinod Himatsinghani
+23 minutes 22 seconds23:22
+Vinod Himatsinghani 23 minutes 22 seconds
+No, no problems. That's OK. Don't worry.
+Vinod Himatsinghani 23 minutes 30 seconds
+Sounds good. All right. Thank you.
+Vinod Himatsinghani 23 minutes 33 seconds
+But.
+
+Vinod Himatsinghani stopped transcription
